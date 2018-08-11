@@ -13,7 +13,6 @@
 		112C8578211EF65700517242 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 112C8576211EF65700517242 /* Main.storyboard */; };
 		112C8581211EFD4500517242 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112C8580211EFD4500517242 /* QuotesViewController.swift */; };
 		112C8583211EFEC000517242 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112C8582211EFEC000517242 /* Quote.swift */; };
-		112C8585211F141A00517242 /* Source in Resources */ = {isa = PBXBuildFile; fileRef = 112C8584211F141A00517242 /* Source */; };
 		112C8589211F3CAE00517242 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112C8588211F3CAE00517242 /* EventMonitor.swift */; };
 		112C858B211F60AF00517242 /* imgonline-com-ua-Resize-lIGxSPFDWLGN5Zlz.png in Resources */ = {isa = PBXBuildFile; fileRef = 112C858A211F60AF00517242 /* imgonline-com-ua-Resize-lIGxSPFDWLGN5Zlz.png */; };
 		112C858D211F630200517242 /* twitch-900x298.png in Resources */ = {isa = PBXBuildFile; fileRef = 112C858C211F630200517242 /* twitch-900x298.png */; };
@@ -29,7 +28,6 @@
 		112C857A211EF65700517242 /* Quotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Quotes.entitlements; sourceTree = "<group>"; };
 		112C8580211EFD4500517242 /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
 		112C8582211EFEC000517242 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
-		112C8584211F141A00517242 /* Source */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Source; sourceTree = "<group>"; };
 		112C8588211F3CAE00517242 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		112C858A211F60AF00517242 /* imgonline-com-ua-Resize-lIGxSPFDWLGN5Zlz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imgonline-com-ua-Resize-lIGxSPFDWLGN5Zlz.png"; sourceTree = "<group>"; };
 		112C858C211F630200517242 /* twitch-900x298.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitch-900x298.png"; sourceTree = "<group>"; };
@@ -51,7 +49,6 @@
 			children = (
 				112C856F211EF65600517242 /* Quotes */,
 				112C856E211EF65600517242 /* Products */,
-				112C8584211F141A00517242 /* Source */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,7 +136,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				112C8585211F141A00517242 /* Source in Resources */,
 				112C8575211EF65700517242 /* Assets.xcassets in Resources */,
 				112C858B211F60AF00517242 /* imgonline-com-ua-Resize-lIGxSPFDWLGN5Zlz.png in Resources */,
 				112C8578211EF65700517242 /* Main.storyboard in Resources */,
