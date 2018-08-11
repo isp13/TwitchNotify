@@ -9,14 +9,17 @@
 import Cocoa
 import Foundation
 public var changeSegueId="0"
-
-
+public var autoopt="0"
+public var lowprior="0"
+public var timetowait=10
 class QuotesViewController: NSViewController {
     @IBOutlet var showinfo: NSTextField!
     @IBOutlet var streamLabel: NSTextField!
     @IBOutlet var StreamerInput: NSTextField!
     @IBOutlet var setNickBttn: NSButton!
     @IBOutlet var saveBttn: NSButton!
+    @IBOutlet weak var lowpriority: NSButton!
+    @IBOutlet weak var Autoupdate: NSButton!
     var streamername=""
     
     
@@ -27,6 +30,7 @@ class QuotesViewController: NSViewController {
     }
     
 }
+
 extension QuotesViewController {
     @IBAction func setNicknamevalue(_ sender: NSButton) {
        
@@ -34,8 +38,56 @@ extension QuotesViewController {
         
         
     }
+    @IBAction func autoupdateopt(_ sender: NSButton) {
+        if autoopt == "0"
+        {
+            autoopt = "1"
+        }
+        else
+        {
+            autoopt = "0"
+        }
+        
+    }
+    
+    @IBAction func lowpriorityopt(_ sender: NSButton) {
+        if lowprior == "0"
+        {
+            lowprior = "1"
+        }
+        else
+        {
+            lowprior = "0"
+        }
+        
+    }
+    
     
     @IBAction func saveall(_ sender: NSButton) {//main thing to refresh all
+        if autoopt == "1"
+        {
+            while autoopt == "1"
+            {
+                checkstreamer(streamername:streamername)
+                sleep(1)
+                
+                if changeSegueId == "1"
+                {
+                    //if stream become online
+                }
+                
+                if lowprior == "1"
+                {
+                    sleep(90)
+                }
+                else
+                {
+                    sleep(17)
+                }
+            }
+        }
+        
+        
         checkstreamer(streamername:streamername)
         sleep(1)
         if changeSegueId == "1"
@@ -46,6 +98,7 @@ extension QuotesViewController {
         {
             self.showinfo.stringValue=streamername+" is offline =("
         }
+        
         
     }
 }
@@ -60,13 +113,13 @@ func convertToDictionary(from text: String) -> [String: String]? {
 
 
 extension QuotesViewController {
-    // MARK: Storyboard instantiation
+    
     static func freshController() -> QuotesViewController {
-        //1.
+        
         let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
-        //2.
+        
         let identifier = NSStoryboard.SceneIdentifier(rawValue: "QuotesViewController")
-        //3.
+        
         guard let viewcontroller = storyboard.instantiateController(withIdentifier: identifier) as? QuotesViewController else {
             fatalError("Why cant i find QuotesViewController? - Check Main.storyboard")
         }
@@ -102,12 +155,7 @@ func checkstreamer( streamername:String){
     guard let url=URL(string:TWITCH_REQUEST) else {return}
     let session = URLSession.shared
     session.dataTask(with: url) {(data,response,error)in
-        if let response = response as? HTTPURLResponse{
-            
-            
-            
-            
-        }
+        //if let response = response as? HTTPURLResponse
         
         guard let data=data else {return}
         print(data)
