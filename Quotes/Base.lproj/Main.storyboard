@@ -694,48 +694,25 @@
             <objects>
                 <viewController storyboardIdentifier="QuotesViewController" id="XfG-lQ-9wD" customClass="QuotesViewController" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="421" height="214"/>
+                        <rect key="frame" x="0.0" y="0.0" width="401" height="214"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <colorWell fixedFrame="YES" bordered="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8HH-bi-ppc">
-                                <rect key="frame" x="-26" y="158" width="465" height="67"/>
+                            <colorWell fixedFrame="YES" bordered="NO" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8HH-bi-ppc">
+                                <rect key="frame" x="-6" y="158" width="434" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="color" red="0.396078431372549" green="0.25882352941176473" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </colorWell>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lyv-Qq-4d0">
-                                <rect key="frame" x="-2" y="49" width="425" height="74"/>
+                                <rect key="frame" x="-2" y="49" width="405" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" state="on" alignment="center" title="set a streamer" id="2FW-w0-HBI">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" state="on" alignment="center" title="set a streamer and options" id="2FW-w0-HBI">
                                     <font key="font" metaFont="system" size="25"/>
                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uo2-Da-uBS">
-                                <rect key="frame" x="185" y="176" width="161" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" id="m7H-We-tYY">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                                <connections>
-                                    <action selector="StreamerNameInput:" target="XfG-lQ-9wD" id="Nob-X8-1a9"/>
-                                </connections>
-                            </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bf8-Ss-7h3">
-                                <rect key="frame" x="354" y="169" width="65" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="search" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BMt-Oh-YX7">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system" size="10"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="setNicknamevalue:" target="XfG-lQ-9wD" id="cGS-sZ-IV3"/>
-                                </connections>
-                            </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xL3-Em-q42">
-                                <rect key="frame" x="156" y="13" width="108" height="32"/>
+                                <rect key="frame" x="146" y="13" width="108" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9is-fh-hXx">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -766,7 +743,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1pA-4I-awf">
-                                <rect key="frame" x="297" y="21" width="112" height="18"/>
+                                <rect key="frame" x="279" y="22" width="112" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="radio" title="low-priority" bezelStyle="regularSquare" imagePosition="right" alignment="right" inset="2" id="Lwh-NC-wfu">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -779,8 +756,31 @@
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Npu-eL-yol">
                                 <rect key="frame" x="12" y="158" width="132" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="twitch-900x298" id="nTL-Ul-B5b"/>
+                                <imageCell key="cell" alignment="left" imageScaling="proportionallyDown" image="twitch-900x298" id="nTL-Ul-B5b"/>
                             </imageView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bf8-Ss-7h3">
+                                <rect key="frame" x="336" y="169" width="65" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="search" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BMt-Oh-YX7">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system" size="10"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="setNicknamevalue:" target="XfG-lQ-9wD" id="cGS-sZ-IV3"/>
+                                </connections>
+                            </button>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uo2-Da-uBS">
+                                <rect key="frame" x="163" y="176" width="161" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" id="m7H-We-tYY">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <action selector="StreamerNameInput:" target="XfG-lQ-9wD" id="Nob-X8-1a9"/>
+                                </connections>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
@@ -796,7 +796,7 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="MQM-cd-N0e"/>
             </objects>
-            <point key="canvasLocation" x="45.5" y="627"/>
+            <point key="canvasLocation" x="35.5" y="627"/>
         </scene>
     </scenes>
     <resources>
