@@ -64,11 +64,12 @@ extension QuotesViewController {
     
     
     @IBAction func saveall(_ sender: NSButton) {//main thing to refresh all
+        DispatchQueue.global(qos:.userInteractive).async {//
         if autoopt == "1"
         {
             while autoopt == "1"
             {
-                checkstreamer(streamername:streamername)
+                checkstreamer(streamername:self.streamername)
                 sleep(1)
                 
                 if changeSegueId == "1"
@@ -86,7 +87,7 @@ extension QuotesViewController {
                 }
             }
         }
-        
+        }//
         
         checkstreamer(streamername:streamername)
         sleep(1)
